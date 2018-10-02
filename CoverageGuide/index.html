@@ -1,0 +1,1327 @@
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  
+  <link rel="shortcut icon" href="../img/favicon.ico">
+  <title>CoverageGuide - CIS-CAT Pro Assessor v4</title>
+  <link href='https://fonts.googleapis.com/css?family=Lato:400,700|Roboto+Slab:400,700|Inconsolata:400,700' rel='stylesheet' type='text/css'>
+
+  <link rel="stylesheet" href="../css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="../css/theme_extra.css" type="text/css" />
+  <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/styles/github.min.css">
+  
+  <script>
+    // Current page data
+    var mkdocs_page_name = "CoverageGuide";
+    var mkdocs_page_input_path = "CoverageGuide.md";
+    var mkdocs_page_url = null;
+  </script>
+  
+  <script src="../js/jquery-2.1.1.min.js" defer></script>
+  <script src="../js/modernizr-2.8.3.min.js" defer></script>
+  <script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/highlight.min.js"></script>
+  <script>hljs.initHighlightingOnLoad();</script> 
+  
+</head>
+
+<body class="wy-body-for-nav" role="document">
+
+  <div class="wy-grid-for-nav">
+
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side stickynav">
+      <div class="wy-side-nav-search">
+        <a href=".." class="icon icon-home"> CIS-CAT Pro Assessor v4</a>
+        <div role="search">
+  <form id ="rtd-search-form" class="wy-form" action="../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" title="Type search term here" />
+  </form>
+</div>
+      </div>
+
+      <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+	<ul class="current">
+	  
+          
+            <li class="toctree-l1">
+		
+    <a class="" href="..">Home</a>
+	    </li>
+          
+            <li class="toctree-l1">
+		
+    <a class="" href="../UsersGuide/">UsersGuide</a>
+	    </li>
+          
+            <li class="toctree-l1">
+		
+    <a class="" href="../ConfigurationGuide/">ConfigurationGuide</a>
+	    </li>
+          
+        </ul>
+      </div>
+      &nbsp;
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" role="navigation" aria-label="top navigation">
+        <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+        <a href="..">CIS-CAT Pro Assessor v4</a>
+      </nav>
+
+      
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="breadcrumbs navigation">
+  <ul class="wy-breadcrumbs">
+    <li><a href="..">Docs</a> &raquo;</li>
+    
+      
+    
+    <li>CoverageGuide</li>
+    <li class="wy-breadcrumbs-aside">
+      
+    </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main">
+            <div class="section">
+              
+                <hr />
+<p>title: Coverage Guide
+summary: CIS-CAT Pro Assessor v4 Coverage Guide
+authors:
+    - B. Munyan
+    - L. Patsantaras</p>
+<hr />
+<h1 id="cis-cat-pro-assessor-coverage-guide">CIS-CAT Pro Assessor Coverage Guide</h1>
+<p><img alt="" src="http://i.imgur.com/5yZfZi5.jpg" /></p>
+<p><strong>NOTE: CIS-CAT Pro Assessor v4 is currently in BETA and this documentation will change as a result of ongoing testing and feedback.  Until the official release of CIS-CAT Pro Assessor v4, please consider this document fluid.</strong></p>
+<h2 id="introduction">Introduction</h2>
+<p>This document provides information about the assessment capabilities of CIS-CAT Pro Assessor v4, such as included benchmarks, OVAL test types, scripting capabilities, etc.</p>
+<h2 id="cis-benchmark-coverage">CIS Benchmark Coverage</h2>
+<p>CIS currently distributes CIS-CAT with production support for the following benchmarks. The benchmarks utilize standards included in the Security Content Automation Protocol, such as the eXtensible Configuration Checklist Description Format (XCCDF) and the Open Vulnerability and Assessment Language (OVAL).</p>
+<p>Note that any benchmark listed below which displays a bulleted list of "<code>id</code>:description" information are those benchmarks which contain "interactive values".  Please see the <a href="./CIS-CAT%20Pro%20Assessor%20CLI%20User's%20Guide">CIS-CAT Pro Assessor CLI User's Guide</a> for more information regarding configuration of these values.</p>
+<ul>
+<li><strong>CIS Amazon Linux Benchmark, v2.0.0</strong></li>
+<li><strong>CIS Apple OSX 10.10 Benchmark, v1.2.0</strong></li>
+<li><strong>CIS Apple OSX 10.11 Benchmark, v1.1.0</strong></li>
+<li><strong>CIS Apple OSX 10.12 Benchmark, v1.0.0</strong></li>
+<li><strong>CIS CentOS Linux 6 Benchmark, v2.0.2</strong></li>
+<li><strong>CIS CentOS Linux 7 Benchmark, v2.2.0</strong></li>
+<li><strong>CIS Cisco IOS 12 Benchmark, v4.0.0</strong></li>
+<li><strong>CIS Cisco IOS 15 Benchmark, v4.0.0</strong></li>
+<li><strong>CIS Debian Linux 7 Benchmark, v1.0.0</strong></li>
+<li><strong>CIS Debian Linux 8 Benchmark, v1.0.0</strong></li>
+<li><strong>CIS Google Chrome Benchmark, v1.3.0</strong></li>
+<li><strong>CIS MIT Kerberos 1.10 Benchmark, v1.0.0</strong></li>
+<li><strong>CIS Microsoft IIS 7 Benchmark, v1.8.0</strong></li>
+<li><strong>CIS Microsoft IIS 8 Benchmark, v1.5.0</strong></li>
+<li><strong>CIS Microsoft Internet Explorer 10 Benchmark, v1.1.0</strong></li>
+<li><strong>CIS Microsoft Internet Explorer 11 Benchmark, v1.0.0</strong></li>
+<li><strong>CIS Microsoft Office Access 2013 Benchmark, v1.0.1</strong></li>
+<li><strong>CIS Microsoft Office Access 2016 Benchmark, v1.0.1</strong></li>
+<li><strong>CIS Microsoft Office Excel 2013 Benchmark, v1.0.1</strong></li>
+<li><strong>CIS Microsoft Office Excel 2016 Benchmark, v1.0.1</strong></li>
+<li><strong>CIS Microsoft Office Outlook 2013 Benchmark, v1.1.0</strong></li>
+<li><strong>CIS Microsoft Office Outlook 2016 Benchmark, v1.1.0</strong></li>
+<li><strong>CIS Microsoft Office PowerPoint 2013 Benchmark, v1.0.1</strong></li>
+<li><strong>CIS Microsoft Office PowerPoint 2016 Benchmark, v1.0.1</strong></li>
+<li><strong>CIS Microsoft Office Word 2013 Benchmark, v1.1.0</strong></li>
+<li><strong>CIS Microsoft Office Word 2016 Benchmark, v1.1.0</strong></li>
+<li><strong>CIS Microsoft Office 2013 Benchmark, v1.1.0</strong></li>
+<li><strong>CIS Microsoft Office 2016 Benchmark, v1.1.0</strong></li>
+<li><strong>CIS Microsoft SQL Server 2008 R2 Benchmark, v1.5.0</strong><ul>
+<li><code>xccdf_org.cisecurity_value_jdbc.url</code>: SQL Server connection string.</li>
+</ul>
+</li>
+<li><strong>CIS Microsoft SQL Server 2012 Benchmark, v1.4.0</strong><ul>
+<li><code>xccdf_org.cisecurity_value_jdbc.url</code>: SQL Server connection string.</li>
+</ul>
+</li>
+<li><strong>CIS Microsoft SQL Server 2014 Benchmark, v1.3.0</strong><ul>
+<li><code>xccdf_org.cisecurity_value_jdbc.url</code>: SQL Server connection string.</li>
+</ul>
+</li>
+<li><strong>CIS Microsoft SQL Server 2016 Benchmark, v1.0.0</strong><ul>
+<li><code>xccdf_org.cisecurity_value_jdbc.url</code>: SQL Server connection string.</li>
+</ul>
+</li>
+<li><strong>CIS Microsoft Windows 10 Enterprise Release 1607 Benchmark, v1.2.0</strong></li>
+<li><strong>CIS Microsoft Windows 10 Enterprise Release 1703 Benchmark, v1.3.0</strong></li>
+<li><strong>CIS Microsoft Windows 10 Enterprise Release 1709 Benchmark, v1.4.0</strong></li>
+<li><strong>CIS Microsoft Windows Server 2003 Benchmark, v3.1.0</strong></li>
+<li><strong>CIS Microsoft Windows Server 2008 (non-R2) Benchmark, v3.1.0</strong></li>
+<li><strong>CIS Microsoft Windows Server 2008 R2 Benchmark, v3.1.0</strong></li>
+<li><strong>CIS Microsoft Windows Server 2012 (non-R2) Benchmark, v2.1.0</strong></li>
+<li><strong>CIS Microsoft Windows Server 2012 R2 Benchmark, v2.3.0</strong></li>
+<li><strong>CIS Microsoft Windows Server 2016 RTM (Release 1607) Benchmark, v1.0.0</strong></li>
+<li><strong>CIS Microsoft Windows 7 Workstation Benchmark, v3.1.0</strong></li>
+<li><strong>CIS Microsoft Windows 8 Benchmark, v1.0.0</strong></li>
+<li><strong>CIS Microsoft Windows 8.1 Workstation Benchmark, v2.3.0</strong></li>
+<li><strong>CIS Microsoft Windows XP Benchmark, v3.1.0</strong></li>
+<li><strong>CIS Mozilla Firefox 24 ESR Benchmark, v1.0.0</strong></li>
+<li><strong>CIS Mozilla Firefox 38 ESR Benchmark, v1.0.0</strong></li>
+<li><strong>CIS Oracle MySQL Community Server 5.6 Benchmark, v1.0.0</strong><ul>
+<li><code>xccdf_org.cisecurity_value_jdbc.url</code>: MySQL Server connection string.</li>
+<li><code>xccdf_org.cisecurity_value_repl.user</code>: MySQL replication user name.</li>
+</ul>
+</li>
+<li><strong>CIS Oracle MySQL Enterprise Edition 5.6 Benchmark, v1.0.0</strong><ul>
+<li><code>xccdf_org.cisecurity_value_jdbc.url</code>: MySQL Server connection string.</li>
+<li><code>xccdf_org.cisecurity_value_repl.user</code>: MySQL replication user name.</li>
+</ul>
+</li>
+<li><strong>CIS Oracle MySQL Community Server 5.7 Benchmark, v1.0.0</strong><ul>
+<li><code>xccdf_org.cisecurity_value_jdbc.url</code>: MySQL Server connection string.</li>
+<li><code>xccdf_org.cisecurity_value_repl.user</code>: MySQL replication user name.</li>
+</ul>
+</li>
+<li><strong>CIS Oracle MySQL Enterprise Edition 5.7 Benchmark, v1.0.0</strong><ul>
+<li><code>xccdf_org.cisecurity_value_jdbc.url</code>: MySQL Server connection string.</li>
+<li><code>xccdf_org.cisecurity_value_repl.user</code>: MySQL replication user name.</li>
+</ul>
+</li>
+<li><strong>CIS Oracle Database 11g R2 Benchmark, v2.2.0</strong><ul>
+<li><code>xccdf_org.cisecurity_value_jdbc.url</code>: Oracle 11g R2 Server connection string.</li>
+<li><code>xccdf_org.cisecurity_value_listener.ora</code>: Path to the listener.ora file</li>
+</ul>
+</li>
+<li><strong>CIS Oracle Database 12c Benchmark, v2.0.0</strong><ul>
+<li><code>xccdf_org.cisecurity_value_jdbc.url</code>: Oracle Database connection string.</li>
+<li><code>xccdf_org.cisecurity_value_listener.ora</code>: Path to the listener.ora file</li>
+</ul>
+</li>
+<li><strong>CIS Oracle Linux 6 Benchmark, v1.0.0</strong></li>
+<li><strong>CIS Oracle Linux 7 Benchmark, v2.0.0</strong></li>
+<li><strong>CIS PostgreSQL 9.5 Benchmark, v1.0.0</strong><ul>
+<li><code>xccdf_org.cisecurity_value_jdbc.url</code>: PostgreSQL Database connection string.</li>
+</ul>
+</li>
+<li><strong>CIS Red Hat Enterprise Linux 5 Benchmark, v2.2.0</strong></li>
+<li><strong>CIS Red Hat Enterprise Linux 6 Benchmark, v2.0.2</strong></li>
+<li><strong>CIS Red Hat Enterprise Linux 7 Benchmark, v2.1.1</strong></li>
+<li><strong>CIS SUSE Linux Enterprise 11 Benchmark, v2.0.0</strong></li>
+<li><strong>CIS SUSE Linux Enterprise 12 Benchmark, v2.0.0</strong></li>
+<li><strong>CIS Ubuntu Linux 14.04 LTS Benchmark, v2.0.0</strong></li>
+<li><strong>CIS Ubuntu Linux 16.04 LTS Benchmark, v1.0.0</strong></li>
+<li><strong>CIS Ubuntu Linux 18.04 LTS Benchmark, v1.0.0</strong></li>
+</ul>
+<p><strong>NOTE</strong>:  Any benchmarks which utilized CIS' proprietary Embedded Check Language (ECL) are not yet supported in CIS-CAT Pro Assessor v4.  Further development will either implement these benchmarks using currently available scripting capabilities, or will be migrated to OVAL when platform coverage is expanded.</p>
+<h2 id="platform-coverage-for-vulnerability-assessments">Platform Coverage for Vulnerability Assessments</h2>
+<p>Using the <code>-vdd</code> command-line option, CIS-CAT Pro Assessor v4 is able to download the latest vulnerability definitions from various repositories.  A number of different platforms are officially supported by CIS-CAT Pro Assessor v4, including:</p>
+<table>
+<thead>
+<tr>
+<th>Platform</th>
+<th>Downloaded From</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Microsoft Windows XP</td>
+<td>https://oval.cisecurity.org/repository/download/5.10/vulnerability</td>
+</tr>
+<tr>
+<td>Microsoft Windows 7</td>
+<td>https://oval.cisecurity.org/repository/download/5.10/vulnerability</td>
+</tr>
+<tr>
+<td>Microsoft Windows 8</td>
+<td>https://oval.cisecurity.org/repository/download/5.10/vulnerability</td>
+</tr>
+<tr>
+<td>Microsoft Windows 8.1</td>
+<td>https://oval.cisecurity.org/repository/download/5.10/vulnerability</td>
+</tr>
+<tr>
+<td>Microsoft Windows 10</td>
+<td>https://oval.cisecurity.org/repository/download/5.10/vulnerability</td>
+</tr>
+<tr>
+<td>Microsoft Windows Server 2003</td>
+<td>https://oval.cisecurity.org/repository/download/5.10/vulnerability</td>
+</tr>
+<tr>
+<td>Microsoft Windows Server 2008</td>
+<td>https://oval.cisecurity.org/repository/download/5.10/vulnerability</td>
+</tr>
+<tr>
+<td>Microsoft Windows Server 2008 R2</td>
+<td>https://oval.cisecurity.org/repository/download/5.10/vulnerability</td>
+</tr>
+<tr>
+<td>Microsoft Windows Server 2012</td>
+<td>https://oval.cisecurity.org/repository/download/5.10/vulnerability</td>
+</tr>
+<tr>
+<td>Microsoft Windows Server 2012 R2</td>
+<td>https://oval.cisecurity.org/repository/download/5.10/vulnerability</td>
+</tr>
+<tr>
+<td>Microsoft Windows Server 2016</td>
+<td>https://oval.cisecurity.org/repository/download/5.10/vulnerability</td>
+</tr>
+<tr>
+<td>Red Hat Enterprise Linux</td>
+<td>https://www.redhat.com/security/data/oval</td>
+</tr>
+<tr>
+<td>SuSE Linux Enterprise Server 9</td>
+<td>https://support.novell.com/security/oval</td>
+</tr>
+<tr>
+<td>SuSE Linux Enterprise Server 10</td>
+<td>https://support.novell.com/security/oval</td>
+</tr>
+<tr>
+<td>SuSE Linux Enterprise Server 11</td>
+<td>https://support.novell.com/security/oval</td>
+</tr>
+<tr>
+<td>SuSE Linux Enterprise Server 12</td>
+<td>https://support.novell.com/security/oval</td>
+</tr>
+<tr>
+<td>Ubuntu Linux 12.04</td>
+<td>https://people.canonical.com/~ubuntu-security/oval</td>
+</tr>
+<tr>
+<td>Ubuntu Linux 14.04</td>
+<td>https://people.canonical.com/~ubuntu-security/oval</td>
+</tr>
+<tr>
+<td>Ubuntu Linux 16.04</td>
+<td>https://people.canonical.com/~ubuntu-security/oval</td>
+</tr>
+<tr>
+<td>Ubuntu Linux 18.04</td>
+<td>https://people.canonical.com/~ubuntu-security/oval</td>
+</tr>
+</tbody>
+</table>
+<h2 id="oval-capabilities">OVAL Capabilities</h2>
+<p>International in scope and free for public use, OVAL is an information security community effort to standardize how to assess and report upon the machine state of computer systems. OVAL includes a language to encode system details, and an assortment of content repositories held throughout the community.</p>
+<p>Tools and services that use OVAL for the three steps of system assessment — representing system information, expressing specific machine states, and reporting the results of an assessment — provide enterprises with accurate, consistent, and actionable information so they may improve their security. Use of OVAL also provides for reliable and reproducible information assurance metrics and enables interoperability and automation among security tools and services.</p>
+<h3 id="platform-independent">Platform Independent</h3>
+<table>
+<thead>
+<tr>
+<th>Test Name</th>
+<th>Implemented?</th>
+<th>Notes</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Environment Variable (&lt;5.8)</td>
+<td>Y</td>
+<td></td>
+</tr>
+<tr>
+<td>Environment Variable (5.8+)</td>
+<td>N</td>
+<td>In development</td>
+</tr>
+<tr>
+<td>Family</td>
+<td>Y</td>
+<td></td>
+</tr>
+<tr>
+<td>File Hash (&lt;5.8)</td>
+<td>Y</td>
+<td></td>
+</tr>
+<tr>
+<td>File Hash (5.8+)</td>
+<td>Y</td>
+<td></td>
+</tr>
+<tr>
+<td>LDAP (&lt;5.7)</td>
+<td>Y</td>
+<td></td>
+</tr>
+<tr>
+<td>LDAP (5.7+)</td>
+<td>N</td>
+<td>Deprecated</td>
+</tr>
+<tr>
+<td>SQL (&lt;5.7+)</td>
+<td>N</td>
+<td>Deprecated</td>
+</tr>
+<tr>
+<td>SQL (5.7+)</td>
+<td>Y</td>
+<td></td>
+</tr>
+<tr>
+<td>Text File Content (&lt;5.4)</td>
+<td>Y</td>
+<td></td>
+</tr>
+<tr>
+<td>Text File Content (5.4+)</td>
+<td>Y</td>
+<td></td>
+</tr>
+<tr>
+<td>Unknown</td>
+<td>Y</td>
+<td></td>
+</tr>
+<tr>
+<td>Variable</td>
+<td>Y</td>
+<td></td>
+</tr>
+<tr>
+<td>XML File Content</td>
+<td>Y</td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<h3 id="microsoft-windows">Microsoft Windows</h3>
+<table>
+<thead>
+<tr>
+<th>Test Name</th>
+<th>Implemented?</th>
+<th>Notes</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Access Token</td>
+<td>Y</td>
+<td></td>
+</tr>
+<tr>
+<td>Active Directory (&lt;5.7)</td>
+<td>N</td>
+<td>On roadmap</td>
+</tr>
+<tr>
+<td>Active Directory (5.7+)</td>
+<td>N</td>
+<td>In Development</td>
+</tr>
+<tr>
+<td>Audit Event Policy</td>
+<td>Y</td>
+<td></td>
+</tr>
+<tr>
+<td>Audit Event Policy Subcategories</td>
+<td>Y</td>
+<td></td>
+</tr>
+<tr>
+<td>Cmdlet</td>
+<td>Y</td>
+<td></td>
+</tr>
+<tr>
+<td>DNSCache</td>
+<td>N</td>
+<td>On roadmap</td>
+</tr>
+<tr>
+<td>File</td>
+<td>Y</td>
+<td></td>
+</tr>
+<tr>
+<td>File Audited Permissions (&lt;5.3)</td>
+<td>Y</td>
+<td></td>
+</tr>
+<tr>
+<td>File Audited Permissions (5.3+)</td>
+<td>Y</td>
+<td></td>
+</tr>
+<tr>
+<td>File Effective Rights (&lt;5.3)</td>
+<td>Y</td>
+<td></td>
+</tr>
+<tr>
+<td>File Effective Rights (5.3+)</td>
+<td>Y</td>
+<td></td>
+</tr>
+<tr>
+<td>Group</td>
+<td>Y</td>
+<td></td>
+</tr>
+<tr>
+<td>Group SID</td>
+<td>Y</td>
+<td></td>
+</tr>
+<tr>
+<td>Interface</td>
+<td>Y</td>
+<td></td>
+</tr>
+<tr>
+<td>Junction</td>
+<td>Y</td>
+<td></td>
+</tr>
+<tr>
+<td>License</td>
+<td>Y</td>
+<td></td>
+</tr>
+<tr>
+<td>Lockout Policy</td>
+<td>Y</td>
+<td></td>
+</tr>
+<tr>
+<td>Metabase</td>
+<td>N</td>
+<td></td>
+</tr>
+<tr>
+<td>NTUser</td>
+<td>N</td>
+<td>On roadmap</td>
+</tr>
+<tr>
+<td>Password Policy</td>
+<td>Y</td>
+<td></td>
+</tr>
+<tr>
+<td>PEHeader</td>
+<td>Y</td>
+<td></td>
+</tr>
+<tr>
+<td>Port</td>
+<td>Y</td>
+<td></td>
+</tr>
+<tr>
+<td>Printer Effective Rights</td>
+<td>N</td>
+<td></td>
+</tr>
+<tr>
+<td>Process (&lt;5.8)</td>
+<td>Y</td>
+<td></td>
+</tr>
+<tr>
+<td>Process (5.8+)</td>
+<td>Y</td>
+<td></td>
+</tr>
+<tr>
+<td>Registry</td>
+<td>Y</td>
+<td></td>
+</tr>
+<tr>
+<td>Registry Key Audited Permissions (&lt;5.3)</td>
+<td>Y</td>
+<td></td>
+</tr>
+<tr>
+<td>Registry Key Audited Permissions (5.3+)</td>
+<td>Y</td>
+<td></td>
+</tr>
+<tr>
+<td>Registry Key Effective Rights (&lt;5.3)</td>
+<td>Y</td>
+<td></td>
+</tr>
+<tr>
+<td>Registry Key Effective Rights (5.3+)</td>
+<td>Y</td>
+<td></td>
+</tr>
+<tr>
+<td>Service</td>
+<td>Y</td>
+<td></td>
+</tr>
+<tr>
+<td>Service Effective Rights</td>
+<td>Y</td>
+<td></td>
+</tr>
+<tr>
+<td>Shared Resource</td>
+<td>Y</td>
+<td></td>
+</tr>
+<tr>
+<td>Shared Resource Audited Permissions</td>
+<td>Y</td>
+<td></td>
+</tr>
+<tr>
+<td>Shared Resource Effective Rights</td>
+<td>Y</td>
+<td></td>
+</tr>
+<tr>
+<td>SID</td>
+<td>Y</td>
+<td></td>
+</tr>
+<tr>
+<td>SID SID</td>
+<td>Y</td>
+<td></td>
+</tr>
+<tr>
+<td>System Metric</td>
+<td>Y</td>
+<td></td>
+</tr>
+<tr>
+<td>UAC</td>
+<td>Y</td>
+<td></td>
+</tr>
+<tr>
+<td>User</td>
+<td>Y</td>
+<td></td>
+</tr>
+<tr>
+<td>User Rights</td>
+<td>Y</td>
+<td></td>
+</tr>
+<tr>
+<td>User SID (&lt;5.5)</td>
+<td>Y</td>
+<td></td>
+</tr>
+<tr>
+<td>User SID (5.5+)</td>
+<td>Y</td>
+<td></td>
+</tr>
+<tr>
+<td>Volume</td>
+<td>Y</td>
+<td></td>
+</tr>
+<tr>
+<td>WMI (&lt;5.7)</td>
+<td>Y</td>
+<td></td>
+</tr>
+<tr>
+<td>WMI (5.7+)</td>
+<td>Y</td>
+<td></td>
+</tr>
+<tr>
+<td>WUA Update Searcher</td>
+<td>Y</td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<h3 id="unix">Unix</h3>
+<table>
+<thead>
+<tr>
+<th>Test Name</th>
+<th>Implemented?</th>
+<th>Notes</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>DNSCache</td>
+<td>N</td>
+<td>On roadmap</td>
+</tr>
+<tr>
+<td>File</td>
+<td>Y</td>
+<td></td>
+</tr>
+<tr>
+<td>File Extended Attribute</td>
+<td>Y</td>
+<td></td>
+</tr>
+<tr>
+<td>Gconf</td>
+<td>Y</td>
+<td></td>
+</tr>
+<tr>
+<td>Inetd</td>
+<td>Y</td>
+<td></td>
+</tr>
+<tr>
+<td>Interface</td>
+<td>Y</td>
+<td></td>
+</tr>
+<tr>
+<td>Password</td>
+<td>Y</td>
+<td></td>
+</tr>
+<tr>
+<td>Process (&lt;5.8)</td>
+<td>N</td>
+<td>On roadmap</td>
+</tr>
+<tr>
+<td>Process (5.8+)</td>
+<td>Y</td>
+<td></td>
+</tr>
+<tr>
+<td>Routing Table</td>
+<td>N</td>
+<td>On roadmap</td>
+</tr>
+<tr>
+<td>Runlevel</td>
+<td>Y</td>
+<td></td>
+</tr>
+<tr>
+<td>SCCS</td>
+<td>N</td>
+<td>On roadmap</td>
+</tr>
+<tr>
+<td>Shadow</td>
+<td>Y</td>
+<td></td>
+</tr>
+<tr>
+<td>Symlink</td>
+<td>Y</td>
+<td></td>
+</tr>
+<tr>
+<td>Sysctl</td>
+<td>Y</td>
+<td></td>
+</tr>
+<tr>
+<td>Uname</td>
+<td>Y</td>
+<td></td>
+</tr>
+<tr>
+<td>Xinetd</td>
+<td>Y</td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<h3 id="linux">Linux</h3>
+<table>
+<thead>
+<tr>
+<th>Test Name</th>
+<th>Implemented?</th>
+<th>Notes</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>AppArmor Status</td>
+<td>Y</td>
+<td></td>
+</tr>
+<tr>
+<td>DpkgInfo</td>
+<td>Y</td>
+<td></td>
+</tr>
+<tr>
+<td>IfListeners</td>
+<td>N</td>
+<td>On roadmap</td>
+</tr>
+<tr>
+<td>Inet Listening Servers</td>
+<td>Y</td>
+<td></td>
+</tr>
+<tr>
+<td>Partition</td>
+<td>Y</td>
+<td></td>
+</tr>
+<tr>
+<td>RPM Info</td>
+<td>Y</td>
+<td></td>
+</tr>
+<tr>
+<td>RPM Verify</td>
+<td>N</td>
+<td>On roadmap</td>
+</tr>
+<tr>
+<td>RPM Verify File</td>
+<td>N</td>
+<td>On roadmap</td>
+</tr>
+<tr>
+<td>RPM Verify Package</td>
+<td>N</td>
+<td>On roadmap</td>
+</tr>
+<tr>
+<td>SELinux Booleans</td>
+<td>Y</td>
+<td></td>
+</tr>
+<tr>
+<td>SELinux Security Context</td>
+<td>N</td>
+<td>On roadmap</td>
+</tr>
+<tr>
+<td>Slackware PkgInfo</td>
+<td>N</td>
+<td>On roadmap</td>
+</tr>
+<tr>
+<td>Systemd Unit Dependency</td>
+<td>N</td>
+<td>On roadmap</td>
+</tr>
+<tr>
+<td>Systemd Unit Property</td>
+<td>Y</td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<h3 id="mac-osx">Mac OSX</h3>
+<table>
+<thead>
+<tr>
+<th>Test Name</th>
+<th>Implemented?</th>
+<th>Notes</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Account Info</td>
+<td>Y</td>
+<td></td>
+</tr>
+<tr>
+<td>Authorization DB</td>
+<td>Y</td>
+<td></td>
+</tr>
+<tr>
+<td>CoreStorage</td>
+<td>N</td>
+<td>In development</td>
+</tr>
+<tr>
+<td>DiskUtil</td>
+<td>N</td>
+<td>In development</td>
+</tr>
+<tr>
+<td>Gatekeeper</td>
+<td>Y</td>
+<td></td>
+</tr>
+<tr>
+<td>Inet Listening Servers (&lt;5.10)</td>
+<td>N</td>
+<td>In development</td>
+</tr>
+<tr>
+<td>Inet Listening Servers (5.10+)</td>
+<td>N</td>
+<td>In development</td>
+</tr>
+<tr>
+<td>Keychain</td>
+<td>N</td>
+<td>In development</td>
+</tr>
+<tr>
+<td>Launchd</td>
+<td>Y</td>
+<td></td>
+</tr>
+<tr>
+<td>Nvram</td>
+<td>N</td>
+<td>In development</td>
+</tr>
+<tr>
+<td>Plist (&lt;5.10)</td>
+<td>Y</td>
+<td></td>
+</tr>
+<tr>
+<td>Plist (5.10)</td>
+<td>Y</td>
+<td></td>
+</tr>
+<tr>
+<td>Plist (5.11+)</td>
+<td>Y</td>
+<td></td>
+</tr>
+<tr>
+<td>Pwpolicy (&lt;5.9)</td>
+<td>N</td>
+<td>In development</td>
+</tr>
+<tr>
+<td>Pwpolicy (5.9+)</td>
+<td>N</td>
+<td>In development</td>
+</tr>
+<tr>
+<td>Rlimit</td>
+<td>Y</td>
+<td></td>
+</tr>
+<tr>
+<td>Software Update</td>
+<td>N</td>
+<td>In development</td>
+</tr>
+<tr>
+<td>System Profiler</td>
+<td>N</td>
+<td>In development</td>
+</tr>
+<tr>
+<td>System Setup</td>
+<td>N</td>
+<td>In development</td>
+</tr>
+</tbody>
+</table>
+<h3 id="cisco-asa">Cisco ASA</h3>
+<table>
+<thead>
+<tr>
+<th>Test Name</th>
+<th>Implemented?</th>
+<th>Notes</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>ACL</td>
+<td>N</td>
+<td>In development</td>
+</tr>
+<tr>
+<td>Class Map</td>
+<td>N</td>
+<td>In development</td>
+</tr>
+<tr>
+<td>Interface</td>
+<td>N</td>
+<td>In development</td>
+</tr>
+<tr>
+<td>Line</td>
+<td>N</td>
+<td>In development</td>
+</tr>
+<tr>
+<td>Policy Map</td>
+<td>N</td>
+<td>In development</td>
+</tr>
+<tr>
+<td>Service Policy</td>
+<td>N</td>
+<td>In development</td>
+</tr>
+<tr>
+<td>SNMP Host</td>
+<td>N</td>
+<td>In development</td>
+</tr>
+<tr>
+<td>SNMP Group</td>
+<td>N</td>
+<td>In development</td>
+</tr>
+<tr>
+<td>SNMP User</td>
+<td>N</td>
+<td>In development</td>
+</tr>
+<tr>
+<td>TCP Map</td>
+<td>N</td>
+<td>In development</td>
+</tr>
+<tr>
+<td>Version</td>
+<td>N</td>
+<td>In development</td>
+</tr>
+</tbody>
+</table>
+<h3 id="cisco-ios">Cisco IOS</h3>
+<table>
+<thead>
+<tr>
+<th>Test Name</th>
+<th>Implemented?</th>
+<th>Notes</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>ACL</td>
+<td>Y</td>
+<td>Partial implementation</td>
+</tr>
+<tr>
+<td>BGP Neighbor</td>
+<td>Y</td>
+<td></td>
+</tr>
+<tr>
+<td>Global</td>
+<td>Y</td>
+<td></td>
+</tr>
+<tr>
+<td>Interface</td>
+<td>Y</td>
+<td></td>
+</tr>
+<tr>
+<td>Line</td>
+<td>Y</td>
+<td></td>
+</tr>
+<tr>
+<td>Router</td>
+<td>Y</td>
+<td></td>
+</tr>
+<tr>
+<td>Routing Protocol Auth. Intf.</td>
+<td>Y</td>
+<td></td>
+</tr>
+<tr>
+<td>Section</td>
+<td>Y</td>
+<td></td>
+</tr>
+<tr>
+<td>SNMP</td>
+<td>Y</td>
+<td></td>
+</tr>
+<tr>
+<td>SNMP Community</td>
+<td>Y</td>
+<td></td>
+</tr>
+<tr>
+<td>SNMP Group</td>
+<td>Y</td>
+<td></td>
+</tr>
+<tr>
+<td>SNMP Host</td>
+<td>Y</td>
+<td></td>
+</tr>
+<tr>
+<td>SNMP User</td>
+<td>Y</td>
+<td></td>
+</tr>
+<tr>
+<td>SNMP View</td>
+<td>Y</td>
+<td></td>
+</tr>
+<tr>
+<td>Tclsh</td>
+<td>Y</td>
+<td></td>
+</tr>
+<tr>
+<td>Version (&lt;5.5)</td>
+<td>Y</td>
+<td></td>
+</tr>
+<tr>
+<td>Version (5.5+)</td>
+<td>Y</td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<h3 id="microsoft-iis-extension">Microsoft IIS (Extension)</h3>
+<table>
+<thead>
+<tr>
+<th>Test Name</th>
+<th>Implemented?</th>
+<th>Notes</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Application Host Config</td>
+<td>Y</td>
+<td></td>
+</tr>
+<tr>
+<td>Application Pool</td>
+<td>Y</td>
+<td></td>
+</tr>
+<tr>
+<td>Site Bindings</td>
+<td>Y</td>
+<td></td>
+</tr>
+<tr>
+<td>System Web</td>
+<td>Y</td>
+<td></td>
+</tr>
+<tr>
+<td>Web Config</td>
+<td>Y</td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<h3 id="vmware-esxi-extension">VMware ESXi (Extension)</h3>
+<table>
+<thead>
+<tr>
+<th>Test Name</th>
+<th>Implemented?</th>
+<th>Notes</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>VMHost Acceptance Level</td>
+<td>N</td>
+<td>In development</td>
+</tr>
+<tr>
+<td>VMHost VIB</td>
+<td>N</td>
+<td>In development</td>
+</tr>
+<tr>
+<td>VMHost Module</td>
+<td>N</td>
+<td>In development</td>
+</tr>
+<tr>
+<td>VMHost Coredump</td>
+<td>N</td>
+<td>In development</td>
+</tr>
+<tr>
+<td>VMHost Web Server SSL</td>
+<td>N</td>
+<td>In development</td>
+</tr>
+<tr>
+<td>VMHost Authentication</td>
+<td>N</td>
+<td>In development</td>
+</tr>
+<tr>
+<td>VMHost Account</td>
+<td>N</td>
+<td>In development</td>
+</tr>
+<tr>
+<td>VMHost SNMP</td>
+<td>N</td>
+<td>In development</td>
+</tr>
+<tr>
+<td>VMHost Advanced Setting</td>
+<td>N</td>
+<td>In development</td>
+</tr>
+<tr>
+<td>VMHost Service</td>
+<td>N</td>
+<td>In development</td>
+</tr>
+<tr>
+<td>VMHost NTP Server</td>
+<td>N</td>
+<td>In development</td>
+</tr>
+<tr>
+<td>VMHost Lockdown</td>
+<td>N</td>
+<td>In development</td>
+</tr>
+<tr>
+<td>VMHost Firewall Exception</td>
+<td>N</td>
+<td>In development</td>
+</tr>
+<tr>
+<td>VMHost Bus Adapter</td>
+<td>N</td>
+<td>In development</td>
+</tr>
+<tr>
+<td>VMHost iSCSI Host Bus Adapter</td>
+<td>N</td>
+<td>In development</td>
+</tr>
+<tr>
+<td>VMHost vSwitch Policy</td>
+<td>N</td>
+<td>In development</td>
+</tr>
+<tr>
+<td>VM Advanced Setting</td>
+<td>N</td>
+<td>In development</td>
+</tr>
+<tr>
+<td>VM Device</td>
+<td>N</td>
+<td>In development</td>
+</tr>
+<tr>
+<td>VM Hard Disk Device</td>
+<td>N</td>
+<td>In development</td>
+</tr>
+<tr>
+<td>VM Resource Config</td>
+<td>N</td>
+<td>In development</td>
+</tr>
+<tr>
+<td>Virtual Port Group</td>
+<td>N</td>
+<td>In development</td>
+</tr>
+</tbody>
+</table>
+<h3 id="other">Other</h3>
+<table>
+<thead>
+<tr>
+<th>Test Name</th>
+<th>Implemented?</th>
+<th>Notes</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Shell Command</td>
+<td>Y</td>
+<td>Extension, Platform Independent</td>
+</tr>
+<tr>
+<td>Invalid User Home Directory Ownership</td>
+<td>Y</td>
+<td>Extension, Linux</td>
+</tr>
+</tbody>
+</table>
+<h2 id="scripting-capabilities">Scripting Capabilities</h2>
+<p>CIS-CAT Pro Assessor implements the Script Check Engine (SCE) check system, initially introduced as part of the <a href="http://open-scap.org/page/SCE">OpenSCAP</a> project.  Using SCE in XCCDF documents allows administrators to use already-created scripts written in Bash, Windows Batch files, PowerShell, VBScript, etc. in benchmark recommendations.</p>
+<p>CIS-CAT Pro Assessor supports using SCE usage with the following scripting languages:</p>
+<ul>
+<li>bash</li>
+<li>PowerShell</li>
+<li>Windows batch scripts</li>
+<li>VBScript</li>
+</ul>
+<h2 id="cis-embedded-check-language-ecl">CIS Embedded Check Language (ECL)</h2>
+<p>CIS-CAT Pro Assessor contains minimal implementation of CIS' proprietary Embedded Check Language (ECL).  A subset of the total available functionality has been developed, in order to support both local and remote assessment of Apple OSX benchmarks.</p>
+<p>The following ECL constructs have been implemented:</p>
+<ul>
+<li>File Content</li>
+<li>Shell Command</li>
+<li>Platform</li>
+</ul>
+<p>Note that further ECL implementation is tentative and may not be included in future releases.</p>
+              
+            </div>
+          </div>
+          <footer>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <!-- Copyright etc -->
+    
+  </div>
+
+  Built with <a href="http://www.mkdocs.org">MkDocs</a> using a <a href="https://github.com/snide/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>.
+</footer>
+      
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+
+  <div class="rst-versions" role="note" style="cursor: pointer">
+    <span class="rst-current-version" data-toggle="rst-current-version">
+      
+      
+      
+    </span>
+</div>
+    <script>var base_url = '..';</script>
+    <script src="../js/theme.js" defer></script>
+      <script src="../search/main.js" defer></script>
+
+</body>
+</html>
