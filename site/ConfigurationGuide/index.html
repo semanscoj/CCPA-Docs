@@ -1,0 +1,762 @@
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  
+  <link rel="shortcut icon" href="../img/favicon.ico">
+  <title>Configuration Guide - CIS-CAT Pro Assessor v4</title>
+  <link href='https://fonts.googleapis.com/css?family=Lato:400,700|Roboto+Slab:400,700|Inconsolata:400,700' rel='stylesheet' type='text/css'>
+
+  <link rel="stylesheet" href="../css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="../css/theme_extra.css" type="text/css" />
+  <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/styles/github.min.css">
+  
+  <script>
+    // Current page data
+    var mkdocs_page_name = "Configuration Guide";
+    var mkdocs_page_input_path = "ConfigurationGuide.md";
+    var mkdocs_page_url = null;
+  </script>
+  
+  <script src="../js/jquery-2.1.1.min.js" defer></script>
+  <script src="../js/modernizr-2.8.3.min.js" defer></script>
+  <script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/highlight.min.js"></script>
+  <script>hljs.initHighlightingOnLoad();</script> 
+  
+</head>
+
+<body class="wy-body-for-nav" role="document">
+
+  <div class="wy-grid-for-nav">
+
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side stickynav">
+      <div class="wy-side-nav-search">
+        <a href=".." class="icon icon-home"> CIS-CAT Pro Assessor v4</a>
+        <div role="search">
+  <form id ="rtd-search-form" class="wy-form" action="../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" title="Type search term here" />
+  </form>
+</div>
+      </div>
+
+      <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+	<ul class="current">
+	  
+          
+            <li class="toctree-l1">
+		
+    <a class="" href="..">Home</a>
+	    </li>
+          
+            <li class="toctree-l1">
+		
+    <a class="" href="../UsersGuide/">User's Guide</a>
+	    </li>
+          
+            <li class="toctree-l1 current">
+		
+    <a class="current" href="./">Configuration Guide</a>
+    <ul class="subnav">
+            
+    <li class="toctree-l2"><a href="#cis-cat-pro-assessor-configuration-guide">CIS-CAT Pro Assessor Configuration Guide</a></li>
+    
+        <ul>
+        
+            <li><a class="toctree-l3" href="#introduction">Introduction</a></li>
+        
+            <li><a class="toctree-l3" href="#sessions">Sessions</a></li>
+        
+            <li><a class="toctree-l3" href="#microsoft-windows-endpoint-configuration">Microsoft Windows Endpoint Configuration</a></li>
+        
+            <li><a class="toctree-l3" href="#unixlinuxosx-endpoint-configuration">Unix/Linux/OSX Endpoint Configuration</a></li>
+        
+            <li><a class="toctree-l3" href="#cisco-network-device-endpoint-configuration">Cisco Network Device Endpoint Configuration</a></li>
+        
+            <li><a class="toctree-l3" href="#database-endpoint-configuration">Database Endpoint Configuration</a></li>
+        
+            <li><a class="toctree-l3" href="#vmware-esxi-endpoint-configuration">VMware ESXi Endpoint Configuration</a></li>
+        
+            <li><a class="toctree-l3" href="#extra-configuration-options">Extra configuration Options</a></li>
+        
+        </ul>
+    
+
+    </ul>
+	    </li>
+          
+            <li class="toctree-l1">
+		
+    <a class="" href="../CoverageGuide/">Coverage Guide</a>
+	    </li>
+          
+            <li class="toctree-l1">
+		
+    <a class="" href="../LicenseInformation/">3rd-Party Licenses</a>
+	    </li>
+          
+            <li class="toctree-l1">
+		
+    <a class="" href="../CHANGELOG/">Change Log</a>
+	    </li>
+          
+        </ul>
+      </div>
+      &nbsp;
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" role="navigation" aria-label="top navigation">
+        <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+        <a href="..">CIS-CAT Pro Assessor v4</a>
+      </nav>
+
+      
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="breadcrumbs navigation">
+  <ul class="wy-breadcrumbs">
+    <li><a href="..">Docs</a> &raquo;</li>
+    
+      
+    
+    <li>Configuration Guide</li>
+    <li class="wy-breadcrumbs-aside">
+      
+    </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main">
+            <div class="section">
+              
+                <hr />
+<p>title: Configuration Guide
+summary: CIS-CAT Pro Assessor v4 Configuration Guide
+authors:
+    - B. Munyan
+    - L. Patsantaras</p>
+<hr />
+<h1 id="cis-cat-pro-assessor-configuration-guide">CIS-CAT Pro Assessor Configuration Guide</h1>
+<p><img alt="" src="http://i.imgur.com/5yZfZi5.jpg" /></p>
+<p><strong>NOTE: CIS-CAT Pro Assessor v4 is currently in BETA and this documentation will change as a result of ongoing testing and feedback.  Until the official release of CIS-CAT Pro Assessor v4, please consider this document fluid.</strong></p>
+<h2 id="introduction">Introduction</h2>
+<p>Utilizing the CIS-CAT Pro Assessor CLI, users are capable of performing both host-based (local) assessments, as well as remote-based assessments.  In order to perform assessments of remote endpoints, certain configurations must be made.  The intent of this document is to serve as a guide for enabling systems for remote-based assessments using CIS-CAT Pro Assessor.</p>
+<h2 id="sessions">Sessions</h2>
+<p>CIS-CAT Pro Assessor v4's remote assessment capability depends on the configuration of "sessions"; connection parameters used to create a secure connection to the remote endpoint.  A session configuration requires a number of entries, which will vary depending on the connection type.</p>
+<h3 id="connection-types">Connection Types</h3>
+<p>A number of different connection types exist to allow for maximum flexibility and coverage for the assessment of various endpoints, ranging from the local host to remote Windows, Unix, Linux, and Apple OSX endpoints, as well as Cisco network devices.</p>
+<table>
+<thead>
+<tr>
+<th>Type</th>
+<th>Value</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Local</td>
+<td><code>local</code></td>
+<td>Usage of a "local" session is for a host-based assessment, mimicing the functionality of CIS-CAT Pro v3.  Standalone or command-line applications (such as CIS-CAT Pro Assessor CLI) may use the local session to continue host-based assessments of benchmarks and/or OVAL definitions.</td>
+</tr>
+<tr>
+<td>SSH (Unix, Linux, Apple OSX)</td>
+<td><code>ssh</code></td>
+<td>The "ssh" session type represents a connection to a remote Unix, Linux, or Apple OSX endpoint, via SSH (obviously).  SSH connections can be established a number of different ways, including <code>username/password</code>, <code>username/path to a private key file</code>, <code>username/private key file protected with a passphrase</code>, <code>username/private key file + credentials to use for sudo</code>.</td>
+</tr>
+<tr>
+<td>Windows</td>
+<td><code>windows</code></td>
+<td>The "windows" session type represents a WinRM connection to a remote Microsoft Windows environment.  Both workstations and servers are supported with this connection type and can currently be established using <code>username/password</code> authentication.</td>
+</tr>
+<tr>
+<td>Cisco IOS</td>
+<td><code>ios</code></td>
+<td>The "ios" session type handles the specific case for the assessment of Cisco IOS network devices.  Depending on the specific configuration when the "ios" session type is used, CIS-CAT Pro Assessor will either establish a SSH connection using <code>username/password</code> or <code>username/path to a private key</code> authentication, or will create a modified local session, collecting information from an exported configuration file.</td>
+</tr>
+<tr>
+<td>Cisco ASA</td>
+<td><code>asa</code></td>
+<td>The "asa" session type handles the specific case for the assessment of Cisco ASA devices.  Depending on the specific configuration when the "asa" session type is used, CIS-CAT Pro Assessor will either establish a SSH connection using <code>username/password</code> or <code>username/path to a private key</code> authentication, or will create a modified local session, collecting information from an exported configuration file.</td>
+</tr>
+</tbody>
+</table>
+<h3 id="configuration-properties">Configuration Properties</h3>
+<p>A number of configuration properties exist, and will vary based on the session type.</p>
+<table>
+<thead>
+<tr>
+<th>Property</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>type</code></td>
+<td>The <code>type</code> property MUST be configured to one of the connection types specified above (<code>local</code>, <code>ssh</code>, <code>windows</code>, <code>ios</code>, or <code>asa</code>).</td>
+</tr>
+<tr>
+<td><code>host</code></td>
+<td>The <code>host</code> property is required for any remote connection, and can be either the hostname or IP address (v4 or v6) of the endpoint to be assessed.  Examples include <code>1.2.3.4</code> or <code>CIS-CAT-TEST</code>. <br/><br/> The <code>host</code> property is not needed when assessing against exported network device configuration files.<br/><br/> The <code>host</code> property is not needed when the session type is <code>local</code>.</td>
+</tr>
+<tr>
+<td><code>port</code></td>
+<td>The <code>port</code> property is required for any remote connection.  When using the <code>ssh</code> connection type, the default value for the <code>port</code> property would be <code>22</code>.  When using the <code>windows</code> connection type, the defaut WinRM ports are <code>5985</code> for HTTP and <code>5986</code> for HTTPS. <br/><br/> The <code>port</code> property is not needed when assessing against exported network device configuration files.<br/><br/> The <code>port</code> property is not needed when the session type is <code>local</code>.</td>
+</tr>
+<tr>
+<td><code>user</code></td>
+<td>The <code>user</code> property represents an administrator-level username, used to log on to the remote endpoint.  This can be a domain user or a local administrator on the remote endpoint, or a privileged user when logging on to Cisco network devices.<br/><br/> The <code>user</code> property is not needed when assessing against exported network device configuration files.<br/><br/> The <code>user</code> property is not needed when the session type is <code>local</code>.</td>
+</tr>
+<tr>
+<td><code>cred</code></td>
+<td>The <code>cred</code> property represents the credentials for the <code>user</code>, in order to log on to the remote endpoint.  Note that this is not encrypted, so users must take great care in safeguarding the sessions configuration file(s).  <br/><br/><strong>NOTE</strong>: When executing CIS-CAT Pro Assessor CLI, if a given session's configuration specifies neither the <code>cred</code> nor the <code>identity</code> property, the user will be prompted to enter credentials manually.  This <strong>will block</strong> assessment against other configured sessions until credentials are entered. <br/><br/> The <code>cred</code> property is not needed when assessing against exported network device configuration files.<br/><br/> The <code>cred</code> property is not needed when the session type is <code>local</code>.</td>
+</tr>
+<tr>
+<td><code>identity</code></td>
+<td>The <code>identity</code> property represents the full path to a private key file used for authentication to a remote endpoint.<br/><br/><strong>NOTE</strong>: When executing CIS-CAT Pro Assessor CLI, if a given session's configuration specifies neither the <code>cred</code> nor the <code>identity</code> property, the user will be prompted to enter credentials manually.  This <strong>will block</strong> assessment against other configured sessions until credentials are entered. <br/><br/> The <code>identity</code> property is not needed when assessing against exported network device configuration files.<br/><br/> The <code>identity</code> property is not needed when the session type is <code>local</code>.</td>
+</tr>
+<tr>
+<td><code>identityPassphrase</code></td>
+<td>The <code>identityPassphrase</code> property is optional and should be used in conjunction with the <code>identity</code> property, when that key is protected with a passphrase.</td>
+</tr>
+<tr>
+<td><code>enable</code></td>
+<td>The <code>enable</code> property is used only in network device sessions (<code>ios</code> or <code>asa</code>) and represents the credentials needed to enter "privileged EXEC" mode; required for obtaining the full output of the <code>show tech-support</code> command. <br/><br/> The <code>enable</code> property is not needed when assessing against exported network device configuration files.<br/><br/> The <code>enable</code> property is not needed when the session type is <code>local</code>.</td>
+</tr>
+<tr>
+<td><code>tech</code></td>
+<td>The <code>tech</code> property is REQUIRED when assessing the exported configuration of a network device.  This property specifies the full path to the exported configuration file. <br/><br/> When assessing non-network device endpoints, or assessing a network devices' current running configuration via SSH, the <code>tech</code> property is unnecessary.<br/><br/> The <code>tech</code> property is not needed when the session type is <code>local</code>.</td>
+</tr>
+<tr>
+<td><code>tmp</code></td>
+<td>The <code>tmp</code> property allows users to configure the location of the temporary "ephemeral" directory on the target host.  This "ephemeral" directory is created upon connection to the target endpoint, hosts any scripts which may require executing during system characteristics collection, and is deleted upon the Assessor's completion and session disconnect.  If this property is left blank or not included, the Assessor will use the default "temp" folder as defined for the operating system, such as <code>/tmp</code> or <code>C:\Windows\Temp</code>.</td>
+</tr>
+</tbody>
+</table>
+<h3 id="examples">Examples</h3>
+<p>The examples below provide insight into the creation of a <code>sessions.properties</code> file, which can then be consumed by CIS-CAT Pro Assessor CLI to provide connection configurations when assessing a particular benchmark.  By default, CIS-CAT Pro Assessor CLI will ALWAYS attempt to load a default configuration file located in the application's <code>config</code> folder, named <code>sessions.properties</code>.</p>
+<p>For example, if CCPA is installed at <code>C:\CIS\Assessor-CLI</code>, a file named <code>C:\CIS\Assessor-CLI\config\sessions.properties</code> will be searched for and loaded (if found).  If no <code>sessions.properties</code> files are found or specified, a default <code>local</code> session will be used.</p>
+<p>Configure a session for the local host, defining a custom "temp" folder:</p>
+<pre><code>session.1.type=local
+# Note that specifying Windows directory paths require a double-backslash "\\" as the path separator
+session.1.tmp=C:\\Temp
+</code></pre>
+<p>Configure a remote Windows session using a username/password:</p>
+<pre><code>session.2.type=windows
+session.2.host=123.255.198.9
+session.2.port=5986
+session.2.user=Administrator1
+session.2.cred=s3cr3t3r!
+</code></pre>
+<p>Configure a remote Windows session using a username, but requiring manual password entry:</p>
+<pre><code>session.3.type=windows
+session.3.host=100.50.25.75
+session.3.port=5986
+session.3.user=Administrator1
+</code></pre>
+<p>Configure a remote Linux session using a username/password, defining a custom "temp" folder:</p>
+<pre><code>session.4.type=ssh
+session.4.host=ubuntu-test.example.org
+session.4.port=22
+session.4.user=ubuntu
+session.4.cred=s3cr3t3r!
+session.4.tmp=/home/ubuntu
+</code></pre>
+<p>Configure a remote Linux session using a username/private key:</p>
+<pre><code>session.5.type=ssh
+session.5.host=ubuntu-test.example.org
+session.5.port=22
+session.5.user=ubuntu
+session.5.identity=/home/ubuntu/cis/ubuntu-test.ppk
+</code></pre>
+<p>Configure a remote Linux session using a username/private key, with the private key being secured with a passphrase:</p>
+<pre><code>session.6.type=ssh
+session.6.host=ubuntu-test.example.org
+session.6.port=22
+session.6.user=ubuntu
+session.6.identity=/home/ubuntu/cis/ubuntu-test.ppk
+session.6.identityPassphrase=P@55phr@s3!
+</code></pre>
+<p>Configure a remote Cisco IOS session using a username/password:</p>
+<pre><code>session.7.type=ios
+session.7.host=9.8.7.6
+session.7.port=22
+session.7.user=admin
+session.7.cred=s3cr3t3r!
+session.7.enable=3nab!3d
+</code></pre>
+<p>Configure a remote Cisco IOS session using a username/private key:</p>
+<pre><code>session.8.type=ios
+session.8.host=9.8.7.6
+session.8.port=22
+session.8.user=admin
+# Note that specifying Windows directory paths require a double-backslash "\\" as the path separator
+session.8.identity=C:\\CIS\\cisco-ios.ppk
+session.8.enable=3nab!3d
+</code></pre>
+<p>Configure a Cisco IOS session pointing to an exported configuration file:</p>
+<pre><code>session.9.type=ios
+# Note that specifying Windows directory paths require a double-backslash "\\" as the path separator
+session.9.tech=C:\\CIS\\TS\\tech-support-export.txt
+</code></pre>
+<h2 id="microsoft-windows-endpoint-configuration">Microsoft Windows Endpoint Configuration</h2>
+<p>CIS-CAT Pro Assessor v4 utilizes the prevalent SMB protocol for file manipulation and uses WinRM for process execution.  Once connected to a remote Windows endpoint, CIS-CAT Pro Assessor establishes an "ephemeral" directory to host script required for the collection of system characteristics from the endpoint.  Once the collection/assessment has completed and the session disconnected, the "ephemeral" directory is removed from the endpoint.</p>
+<p>CIS-CAT Pro Assessor v4 supports both basic authentication for local accounts and Kerberos authentication for domain accounts.  When authenticating with domain accounts, the new-style domain syntax, e.g. <strong><code>ciscatuser@example.org</code></strong> must be used, and <strong>NOT</strong> the old-style domain syntax, such as <code>DOMAIN\User</code>.</p>
+<p>The Assessor will access the administrative shares on the remote host, which are only accessible for users that are part of the <strong>Administrators</strong> on the remote host.</p>
+<h3 id="security-considerations">Security Considerations</h3>
+<p>The majority of CIS benchmarks for Microsoft Windows operating systems contain recommendations restricting WinRM usage.  The following table indicates those restrictions which will need to be relaxed in order to enable remote assessment in CIS-CAT Pro Assessor.</p>
+<table>
+<thead>
+<tr>
+<th>Recommendation</th>
+<th>CIS Benchmark Value</th>
+<th>Relaxed Value</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>18.6.1: Ensure 'Apply UAC restrictions to local accounts on network logons' is set to 'Enabled'</td>
+<td>Enabled</td>
+<td>Disabled</td>
+</tr>
+</tbody>
+</table>
+<h3 id="winrm-configuration">WinRM Configuration</h3>
+<p>In order for CIS-CAT Pro Assessor to connect to a remote Windows host, a number of configuration steps on those hosts must happen.  The following sections will describe the configurations.</p>
+<h4 id="windows-firewall-configuration">Windows Firewall Configuration</h4>
+<p>CIS-CAT Pro Assessor v4 uses both the SMB and WinRM protocols in order to enable file manipulation and process execution, respectively.  As such, to connect to the remote host using SMB, ensure the host is reachable on port <code>445</code>.  To enable connection to the remote host using WinRM over HTTPS, ensure the host is reachable on port <code>5986</code>.</p>
+<p>Users can enable these firewall rules simply using PowerShell and the script provided with the CIS-CAT Pro Assessor v4 application bundle.  The bundle will contain a <code>setup</code> folder, in which will be locate the <strong><code>CISCAT_Pro_Assessor_v4_Firewall_SMB_WinRM.ps1</code></strong> script.  Execute this script in PowerShell to configure the Windows Firewall.</p>
+<h4 id="enable-winrm">Enable WinRM</h4>
+<p>On the remote Windows host, open a Command Prompt using the "Run as Administrator" option.  Enter the following command to enable the default configuration for WinRM:</p>
+<pre><code>winrm quickconfig
+</code></pre>
+<p>A confirmation prompt may be presented to the user.  If so, type <code>Y</code> and hit <code>Enter</code>.  Performing the <code>quickconfig</code> will start the Windows Remote Management service, configure an HTTP listener and create exceptions in the Windows Firewall for the WinRM service.</p>
+<p>If users intend to connect to remote endpoints using WinRM over HTTP (and not HTTPS), then WinRM must be configured to "Allow unencrypted traffic":</p>
+<pre><code>winrm set winrm/config/service @{AllowUnencrypted="true"}
+</code></pre>
+<p>By default, Kerberos authentication is enabled in WinRM.  Disable it if CIS-CAT Pro Assessor will <strong>NOT</strong> be authenticating using domain accounts:</p>
+<pre><code>winrm set winrm/config/service/Auth @{Kerberos="false"}
+</code></pre>
+<p><strong>NOTE</strong>: Do not disable "Negotiate" authentication as the <code>winrm</code> command itself uses that to configure the WinRM subsystem.</p>
+<p>Finally, configure WinRM to provide enough memory to the commands that are going to be executed, e.g. 1024 MB:</p>
+<pre><code>winrm set winrm/config/winrs @{MaxMemoryPerShellMB="1024"}
+</code></pre>
+<h4 id="configure-winrm-over-https">Configure WinRM over HTTPS</h4>
+<p>In order for CIS-CAT Pro Assessor to access the remote Windows host using WinRM over HTTPS, an HTTPS WinRM Listener must be configured using the thumbprint of a certificate for that host.</p>
+<p>Users can attempt to find an existing certificate thumbprint for the remote host using PowerShell.  In the following commands, assume <code>HOSTNAME</code> is the DNS name of the remote Windows host:</p>
+<pre><code>PS C:\Windows\system32&gt; Get-childItem cert:\LocalMachine\Root\ | Select-String -pattern HOSTNAME
+</code></pre>
+<p>If a certificate exists on the system, the PowerShell command will yield results similar to the following:</p>
+<pre><code>[Subject]
+   CN=HOSTNAME
+
+ [Issuer]
+   CN=HOSTNAME
+
+ [Serial Number]
+   527E7AF9142D96AD49A10469A264E766
+
+ [Not Before]
+   5/23/2011 10:23:33 AM
+
+ [Not After]
+   5/20/2021 10:23:33 AM
+
+ [Thumbprint]
+   5C36B638BC31F505EF7F693D9A60C01551DD486F
+</code></pre>
+<p>Once the certificate thumbprint is found, create the HTTPS WinRM listener for the remote host:</p>
+<pre><code>winrm create winrm/config/Listener?Address=*+Transport=HTTPS @{Hostname="HOSTNAME"; CertificateThumbprint="THUMBPRINT"}
+</code></pre>
+<p>Where <code>HOSTNAME</code> is the DNS name of the remote host, such as <code>WINSERVER1</code>, and <code>THUMBPRINT</code> is the certificate thumbprint found in PowerShell, for example <code>5C36B638BC31F505EF7F693D9A60C01551DD486F</code></p>
+<p>If no results are returned, the user may create a self-signed certificate using PowerShell and a script provided with the CIS-CAT Pro Assessor v4 application bundle.  The bundle will contain a <code>setup</code> folder, in which will be located the <strong><code>CISCAT_Pro_Assessor_v4_SelfSignedCertificate.ps1</code></strong> script.  Execute this script in PowerShell to configure the self-signed certificate and create the WinRM HTTPS listener.</p>
+<h4 id="disable-uac-remote-restrictions">Disable UAC remote restrictions</h4>
+<p>To better protect those users who are members of the local Administrators group, Microsoft implemented UAC restrictions on the network. This mechanism helps prevent against "loopback" attacks. This mechanism also helps prevent local malicious software from running remotely with administrative rights.</p>
+<p>When a user who is a member of the local administrators group on the target remote computer establishes a remote administrative connection by using the <code>net use * \\remotecomputer\Share$</code> command, for example, they will not connect as a full administrator. The user has no elevation potential on the remote computer, and the user cannot perform administrative tasks. If the user wants to administer the workstation with a Security Account Manager (SAM) account, the user must interactively log on to the computer that is to be administered with Remote Assistance or Remote Desktop, if these services are available.</p>
+<p>To disable UAC remote restrictions, follow these steps: </p>
+<ol>
+<li>Click Start, click Run, type <code>regedit</code>, and then press <code>ENTER</code>.</li>
+<li>
+<p>Locate and then click the following registry subkey:</p>
+<p><code>HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Windows\CurrentVersion\Policies\System</code></p>
+</li>
+<li>
+<p>If the <code>LocalAccountTokenFilterPolicy</code> registry entry does not exist, follow these steps: </p>
+<ol>
+<li>On the Edit menu, point to <code>New</code>, and then click <code>DWORD Value</code>.</li>
+<li>Type <code>LocalAccountTokenFilterPolicy</code>, and then press <code>ENTER</code>.</li>
+</ol>
+</li>
+<li>Right-click <code>LocalAccountTokenFilterPolicy</code>, and then click <code>Modify</code>.</li>
+<li>In the Value data box, type <code>1</code>, and then click <code>OK</code>.</li>
+<li>Exit Registry Editor.</li>
+</ol>
+<p>In Windows domain environments, this setting can be configured through Group Policy, however, the Group Policy Object is not a standard policy and must be downloaded and installed separately.  Generally, if an environment has installed the Microsoft Security Compliance Manager (SCM), the GPO is included there and can be exported.</p>
+<p>Otherwise, the Group Policy Objects can be found either <a href="http://blogs.technet.com/b/secguide/archive/2014/08/13/security-baselines-for-windows-8-1-windows-server-2012-r2-and-internet-explorer-11-final.aspx">here</a> or <a href="https://blogs.technet.microsoft.com/secguide/2017/08/30/security-baseline-for-windows-10-creators-update-v1703-final/">here</a>.</p>
+<h4 id="domain-considerations">Domain Considerations</h4>
+<p>If users are planning on authenticating to remote Windows hosts using domain accounts, configuration is necessary both on the remote host, and on the "source" host (the machine hosting CIS-CAT Pro Assessor v4).</p>
+<p><strong>Kerberos - Source Host</strong></p>
+<p>Depending on the operating system of the source hose, create a file called <code>krb5.conf</code> (Unix) or <code>krb5.ini</code> (Windows) with at least the following content:</p>
+<pre><code>[realms]
+EXAMPLE.ORG = {
+    kdc = KDC.EXAMPLE.ORG
+}
+</code></pre>
+<p>Replace the values with the name of your domain/realm and the hostname of your domain controller (multiple entries can be added to allow the source host to connect to multiple domains) and place the file in the default location for your operating system:</p>
+<ul>
+<li>Linux: <code>/etc/krb5.conf</code></li>
+<li>Solaris: <code>/etc/krb5/krb5.conf</code></li>
+<li>Windows: <code>C:\Windows\krb5.ini</code></li>
+</ul>
+<p><strong>Kerberos - Remote Host</strong></p>
+<p>By default, the CIS-CAT Pro Assessor's connection to a remote Windows host will request access to a Kerberos service principal name of the form <code>WSMAN/HOST</code>.  This SPN should be configured automatically when configuring WinRM for the remote host (the "Enable WinRM" section above).</p>
+<p>To verify the SPN has been created, list all the SPNs configured on the remote host:</p>
+<pre><code>setspn -L HOSTNAME
+</code></pre>
+<p>If the <code>WSMAN/HOSTNAME</code> SPN is not listed, it must be configured.  From any host in the domain, invoke the <code>setspn</code> command:</p>
+<pre><code>setspn -A WSMAN/ADDRESS HOSTNAME
+</code></pre>
+<p>Where <code>ADDRESS</code> is the address (DNS Name or IP Address) used to connect to the remote host, and <code>HOSTNAME</code> is the short Windows hostname of the remote host.</p>
+<h2 id="unixlinuxosx-endpoint-configuration">Unix/Linux/OSX Endpoint Configuration</h2>
+<p>CIS-CAT Pro Assessor assesses remote Unix/Linux/OSX targets via SSH connections.  Ensure the target system can be accessed via SSH and that the user connecting to the remote target is either the <code>root</code> user or a user granted privileges to execute commands using <code>sudo</code>.</p>
+<h2 id="cisco-network-device-endpoint-configuration">Cisco Network Device Endpoint Configuration</h2>
+<p>CIS-CAT Pro Assessor v4 can assess either the current running configuration of a Cisco network device, or an exported configuration file.</p>
+<h3 id="connecting-to-a-device">Connecting to a Device</h3>
+<p>CIS-CAT Pro Assessor assesses Cisco network device targets via SSH connections.  Ensure the target system can be accessed via SSH and that the user connecting to the remote target is a privileged user.  When connecting to Cisco devices, CIS-CAT Pro Assessor will be configured to enter "privileged EXEC" mode, so any user connecting to the Cisco device via SSH must be granted appropriate permission to do so.</p>
+<h3 id="exported-configuration-file">Exported Configuration File</h3>
+<p>CIS-CAT Pro Assessor can also assess an exported configuration file; the output of the <code>show tech-support</code> command.  The output from the <code>show tech-support</code> command is very long. To better manage this output, you can redirect the output to a file (for example, <code>show tech-support &gt; *filename*</code> ) in the local writable storage file system or the remote file system.</p>
+<p>You can use one of the following redirection methods:</p>
+<pre><code>&gt; filename —Redirects the output to a file.
+&gt;&gt; filename —Redirects the output to a file in append mode.
+</code></pre>
+<p>This example shows how to redirect the technical support information to a file:</p>
+<pre><code>switch# show tech-support &gt; bootflash:TechSupport.txt
+</code></pre>
+<p>Once the exported configuration file is available to CIS-CAT Pro Assessor, the assessment can be performed against it.  See the example above entitled "Configure a Cisco IOS session pointing to an exported configuration file" to configure the appropriate Assessor "session".</p>
+<h2 id="database-endpoint-configuration">Database Endpoint Configuration</h2>
+<p>Assessing database benchmarks in CIS-CAT Pro Assessor v4 uses the same JDBC connection mechanism as previous versions.  Database benchmarks will require a user to enter the JDBC connection string, or utilize the <code>ciscat.properties</code> file to set the appropriate value for assessment.</p>
+<h3 id="oracle-database">Oracle Database</h3>
+<p>The JDBC string parameter is the connection string used to connect to and authenticate to the Oracle Database service and instance that CIS-CAT will assess.  The Oracle JDBC driver has the ability to connect to Oracle database instances using either the SID or Service Name.</p>
+<p>When connecting to an Oracle database using the SID, the format of the JDBC connection string is:</p>
+<pre><code>jdbc:oracle:thin:[username]/[password]@[hostname]:[port]:[SID]
+</code></pre>
+<p>For example:</p>
+<pre><code>jdbc:oracle:thin:sys as sysdba/pa55w0rd!@servername:1521:ORCL
+</code></pre>
+<p>When connecting to an Oracle database using the Service Name, the format of the JDBC connection string is:</p>
+<pre><code>jdbc:oracle:thin:[username]/[password]@//[hostname]:[port]/[service_name]
+</code></pre>
+<p>For example:</p>
+<pre><code>jdbc:oracle:thin:sys as sysdba/pa55w0rd!@//servername:1521/SERVICE_NAME
+</code></pre>
+<p>The following table describes the components of the Oracle JDBC connection string.</p>
+<table>
+<thead>
+<tr>
+<th>Property Name</th>
+<th>Property Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>username</td>
+<td>A valid username who can connect to the database instance.  This user should have sufficient privileges to <code>SELECT</code> from the various tables and views indicated in the specific Oracle benchmark, or be granted <code>SYSDBA</code> privileges.</td>
+</tr>
+<tr>
+<td>password</td>
+<td>The credentials for the specified <code>username</code> to connect to the database instance.</td>
+</tr>
+<tr>
+<td>hostname</td>
+<td>The name of the server (or it's IP address) hosting the database.</td>
+</tr>
+<tr>
+<td>port</td>
+<td>The port number on which the database is listening.  By default, Oracle databases are configured to listen on port 1521.</td>
+</tr>
+<tr>
+<td>SID</td>
+<td>The database SID.</td>
+</tr>
+<tr>
+<td>Service Name</td>
+<td>The database Service Name.</td>
+</tr>
+</tbody>
+</table>
+<h3 id="oracle-mysql-database">Oracle MySQL Database</h3>
+<p>Oracle MySQL database support is implemented using the MariaDB JDBC driver.  The format for the MariaDB JDBC connection string for MySQL is:</p>
+<pre><code>jdbc:mysql://&lt;host&gt;:&lt;port&gt;/&lt;database&gt;?&lt;key1&gt;=&lt;value1&gt;&amp;&lt;key2&gt;=&lt;value2&gt;...
+</code></pre>
+<p>Consider a MySQL database instance with the following information:</p>
+<table>
+<thead>
+<tr>
+<th>Property Name</th>
+<th>Property Value</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Server Name</td>
+<td>CIS-SERVER</td>
+</tr>
+<tr>
+<td>Database Name</td>
+<td>TestDB</td>
+</tr>
+<tr>
+<td>Database Port</td>
+<td>3306</td>
+</tr>
+<tr>
+<td>Username</td>
+<td>db_user</td>
+</tr>
+<tr>
+<td>Credentials</td>
+<td>db_pass</td>
+</tr>
+</tbody>
+</table>
+<p>When configuring the JDBC connection string in CIS-CAT Pro Assessor, the above information would yield:</p>
+<pre><code>jdbc:mysql://CIS-SERVER:3306/TestDB?user=db_user&amp;password=db_pass
+</code></pre>
+<p>Notable optional parameters involve ensuring JDBC connections are made via SSL:</p>
+<table>
+<thead>
+<tr>
+<th>Property Name</th>
+<th>Property Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>user</td>
+<td>The database username.</td>
+</tr>
+<tr>
+<td>password</td>
+<td>The credentials for the specified <code>user</code> to connect to the database instance.</td>
+</tr>
+<tr>
+<td>useSSL</td>
+<td>Force the usage of SSL on the connection.</td>
+</tr>
+<tr>
+<td>trustServerCertificate</td>
+<td>When using SSL, do <em>not</em> verify the server's certificate.</td>
+</tr>
+<tr>
+<td>serverSslCert</td>
+<td>Server's certificate in DER form, or server's CA certificate. Can be used in one of 3 forms:<br/><br/> <code>serverSslCert=/path/to/cert.pem</code>:  full path to certificate <br/><br/> <code>serverSslCert =classpath:relative/cert.pem</code>:  relative to current classpath <br/><br/> or as verbatim DER-encoded certificate string, starting with<br/> <code>------BEGIN CERTIFICATE-----</code></td>
+</tr>
+</tbody>
+</table>
+<p><strong>NOTES</strong></p>
+<ul>
+<li>The default port number for MySQL is 3306</li>
+<li>The full set of connection properties/optional URL parameters supported by MariaDB can be found at <a href="https://mariadb.com/kb/en/mariadb/about-the-mariadb-java-client/">https://mariadb.com/kb/en/mariadb/about-the-mariadb-java-client/</a></li>
+</ul>
+<h3 id="postgresql-database">PostgreSQL Database</h3>
+<p>CIS-CAT Pro Assessor has implemented support for assessments against PostgreSQL database instances using the PostgreSQL JDBC driver.  The format for the PostgreSQL JDBC connection string is:</p>
+<pre><code>jdbc:postgresql://&lt;host&gt;:&lt;port&gt;/&lt;database&gt;?&lt;key1&gt;=&lt;value1&gt;&amp;&lt;key2&gt;=&lt;value2&gt;...
+</code></pre>
+<p>Consider a PostgreSQL database instance with the following information:</p>
+<table>
+<thead>
+<tr>
+<th>Property Name</th>
+<th>Property Value</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Server Name</td>
+<td>CIS-POSTGRESQL</td>
+</tr>
+<tr>
+<td>Database Name</td>
+<td>PostgreSQL-DB</td>
+</tr>
+<tr>
+<td>Database Port</td>
+<td>5432 (the default)</td>
+</tr>
+<tr>
+<td>Username</td>
+<td>db_user</td>
+</tr>
+<tr>
+<td>Credentials</td>
+<td>db_pass</td>
+</tr>
+</tbody>
+</table>
+<p>When configuring the JDBC connection string in CIS-CAT Pro Assessor, the above information would yield:</p>
+<pre><code>jdbc:postgresql://CIS-POSTGRESQL:5432/PostgreSQL-DB?user=db_user&amp;password=db_pass
+</code></pre>
+<p>If CIS-CAT Pro Assessor is connecting to PostgreSQL on the default port (5432), it can be omitted from the connection string:</p>
+<pre><code>jdbc:postgresql://CIS-POSTGRESQL/PostgreSQL-DB?user=db_user&amp;password=db_pass
+</code></pre>
+<p>Notable optional parameters involve ensuring JDBC connections are made via SSL:</p>
+<table>
+<thead>
+<tr>
+<th>Property Name</th>
+<th>Property Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>user</td>
+<td>The database username.</td>
+</tr>
+<tr>
+<td>password</td>
+<td>The credentials for the specified <code>user</code> to connect to the database instance.</td>
+</tr>
+<tr>
+<td>ssl</td>
+<td>A boolean value (<code>true</code> or <code>false</code>), to force the usage of SSL on the connection.</td>
+</tr>
+</tbody>
+</table>
+<p>For example, in order to force the database connection to require SSL, the connection string would look like:</p>
+<pre><code>jdbc:postgresql://CIS-POSTGRESQL/PostgreSQL-DB?user=db_user&amp;password=db_pass&amp;ssl=true
+</code></pre>
+<p><strong>NOTES</strong></p>
+<ul>
+<li>The default port number for PostgreSQL is 5432</li>
+<li>The full set of connection properties/optional URL parameters supported by PostgreSQL can be found at <a href="https://jdbc.postgresql.org/documentation/head/connect.html">https://jdbc.postgresql.org/documentation/head/connect.html</a></li>
+</ul>
+<h3 id="microsoft-sql-server">Microsoft SQL Server</h3>
+<p>Microsoft SQL Server database support is implemented using the jTDS open source JDBC driver.  The jTDS driver provides support for SQL Server 6.5, 7, 2000, 2005, 2008, and 2012.</p>
+<p>The format of the jTDS JDBC URL for MS SQL Server is:</p>
+<pre><code>jdbc:jtds:sqlserver://&lt;server&gt;[:&lt;port&gt;][/&lt;database&gt;][;&lt;property&gt;=&lt;value&gt;]
+</code></pre>
+<p>Properties required for the database connection can be provided as <code>&lt;property&gt;=&lt;value&gt;</code> pairs, separated by a semi-colon <code>;</code></p>
+<p>Consider a Microsoft SQL Server database instance with the following information:</p>
+<table>
+<thead>
+<tr>
+<th>Property Name</th>
+<th>Property Value</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Server Name</td>
+<td>CIS-SERVER</td>
+</tr>
+<tr>
+<td>Database Name</td>
+<td>TestDB</td>
+</tr>
+<tr>
+<td>Database Port</td>
+<td>1433</td>
+</tr>
+<tr>
+<td>Windows Domain</td>
+<td>WIN-DOMAIN</td>
+</tr>
+<tr>
+<td>Windows Domain User/Password</td>
+<td>jsmith/qw3rty</td>
+</tr>
+<tr>
+<td>SQL Server Database User/Password</td>
+<td>db_user/db_pass</td>
+</tr>
+<tr>
+<td>Instance Name</td>
+<td>InstanceName</td>
+</tr>
+</tbody>
+</table>
+<h4 id="windows-authentication">Windows Authentication</h4>
+<p>Windows Authentication Mode allows a user to connect to a SQL Server instance through a Microsoft Windows user account.  This mode allows domain user account information to be supplied in order to establish a connection.  The following JDBC connection string would be valid for establishing a connection using the above example information:</p>
+<pre><code>jdbc:jtds:sqlserver://CIS-SERVER:1433/TestDB;domain=WIN-DOMAIN;user=jsmith;password=qw3rty;instance=InstanceName
+</code></pre>
+<p>Windows Authentication Mode may also be used against databases running on machines not joined to a domain (standalone servers).  When authenticating with Microsoft Windows user accounts to non-domain joined servers, substitute in the computer name for the domain.  For example, if the name of the standalone server is <code>SQLSERVER</code>, the JDBC connection string would look as such:</p>
+<pre><code>jdbc:jtds:sqlserver://CIS-SERVER:1433;DatabaseName=TestDB;domain=SQLSERVER;user=jsmith;password=qw3rty;instance=InstanceName
+</code></pre>
+<p><strong>NOTE</strong>:  When connecting to a SQL Server using Windows Authentication, a common error message indicates that “the user is attempting to log in from an untrusted domain” (or similar message).  In order to resolve this issue, add the <strong><code>useNTLMv2=true</code></strong> property/value:</p>
+<pre><code>jdbc:jtds:sqlserver://CIS-SERVER:1433;DatabaseName=TestDB;domain=SQLSERVER;user=jsmith;password=qw3rty;instance=InstanceName;useNTLMv2=true
+</code></pre>
+<h4 id="sql-server-authentication">SQL Server Authentication</h4>
+<p>SQL Server Authentication provides the ability for connections to a database instance to be made using trusted username and password information, allowing SQL Server to perform the authentication itself by checking to see if a SQL Server login account has been setup and if the password matches one previously recorded for that user.  The following JDBC URLs would be valid for establishing a connection using the above example information:</p>
+<pre><code>jdbc:jtds:sqlserver://CIS-SERVER:1433/TestDB;user=db_user;password=db_pass;instance=InstanceName
+</code></pre>
+<p>or</p>
+<pre><code>jdbc:jtds:sqlserver://CIS-SERVER:1433;DatabaseName=TestDB;user=jsmith;password=qw3rty;instance=InstanceName
+</code></pre>
+<p><strong>NOTES</strong>:</p>
+<ul>
+<li>The default port number for MS SQL Server databases is <code>1433</code>.</li>
+<li>The full set of connection properties supported by jTDS can be found at <a href="http://jtds.sourceforge.net/faq.html#urlFormat">http://jtds.sourceforge.net/faq.html#urlFormat</a>.</li>
+</ul>
+<h2 id="vmware-esxi-endpoint-configuration">VMware ESXi Endpoint Configuration</h2>
+<p>Currently in development for support in CIS-CAT Pro Assessor v4.</p>
+<h2 id="extra-configuration-options">Extra configuration Options</h2>
+<pre><code>-sessions, --sessions &lt;SESSIONS.PROPERTIES&gt;
+</code></pre>
+<p>The <code>-sessions</code> option allows users to configure multiple endpoints for assessment of a benchmark.  The <code>sessions.properties</code> file configures CIS-CAT Pro Assessor for the assessment of remote endpoints by specifying remote hosts, ports, and credentials which the application will use for connection, collection and evaluation of benchmark recommendations and/or vulnerabilities.  See "Remote Assessment Capability" below for more information.</p>
+<p>If no <code>sessions.properties</code> file exists or no connections are configured in the file, CIS-CAT Pro Assessor CLI will assess the local machine.</p>
+              
+            </div>
+          </div>
+          <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+        <a href="../CoverageGuide/" class="btn btn-neutral float-right" title="Coverage Guide">Next <span class="icon icon-circle-arrow-right"></span></a>
+      
+      
+        <a href="../UsersGuide/" class="btn btn-neutral" title="User's Guide"><span class="icon icon-circle-arrow-left"></span> Previous</a>
+      
+    </div>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <!-- Copyright etc -->
+    
+  </div>
+
+  Built with <a href="http://www.mkdocs.org">MkDocs</a> using a <a href="https://github.com/snide/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>.
+</footer>
+      
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+
+  <div class="rst-versions" role="note" style="cursor: pointer">
+    <span class="rst-current-version" data-toggle="rst-current-version">
+      
+      
+        <span><a href="../UsersGuide/" style="color: #fcfcfc;">&laquo; Previous</a></span>
+      
+      
+        <span style="margin-left: 15px"><a href="../CoverageGuide/" style="color: #fcfcfc">Next &raquo;</a></span>
+      
+    </span>
+</div>
+    <script>var base_url = '..';</script>
+    <script src="../js/theme.js" defer></script>
+      <script src="../search/main.js" defer></script>
+
+</body>
+</html>
